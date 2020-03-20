@@ -17,8 +17,18 @@ import GridItem from "components/Grid/GridItem.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
-
+import MyGal from "../../components/Gallary/Gallary.jsx";
 import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
+
+
+import Menue from "./burger bits/menue.jsx";
+import Ex from "./Example.jsx";
+import Map from "./SimpleMap.jsx";
+
+import Space  from "../../assets/TasteBurger.jpg";
+
+import F from "./land.module.scss";
+
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.jsx";
@@ -69,14 +79,46 @@ class LandingPage extends React.Component {
               </GridItem>
             </GridContainer>
           </div>
+         
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
-            <ProductSection />
-            <TeamSection />
-            <WorkSection />
-          </div>
+  <br/>
+  <br/>
+          <div className={F.flex}><br/>
+<img className={F.images} src={Space}></img>          <container className={F.margin}>
+<h1 className={F.font}>Fresh Somerset Ingredients</h1>
+
+<h3 className={F.font}>
+
+<br/>
+
+
+  Buckland Burgers is a gourmet burger company based in Bristol. 
+Founded in the summer of 2015 by Stephen Brand and his boyfriend 
+Levi Lovell. Originally an off shoot of a market based artisan 
+meat company based in Somerset called Buckland Venison. </h3>
+
+</container>
+
+ </div>
+ <qr/> 
+ <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<qr/><container>
+ <Ex/></container>
+             <MyGal/>
+<div className={F.font}>
+  <h1>just to extend below the gallery</h1>
+  </div>          </div>
         </div>
+        <Menue/>
+        <Map/>
         <Footer />
       </div>
     );

@@ -10,6 +10,21 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-material-ui',
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: 'Berkshire Swash',
+            variants: [`400`, `700`] 
+          },
+          {
+            family: `Roboto`,
+            subsets: [`latin`]
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'gatsby-starter-default',
