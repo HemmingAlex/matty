@@ -66,7 +66,7 @@ function HeaderLinks({ ...props }) {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://twitter.com/CreativeTim"
+            href="https://twitter.com/bucklandburgers?lang=en"
             target="_blank"
             color="transparent"
             className={classes.navLink}
@@ -84,7 +84,7 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim"
+            href="https://www.facebook.com/buckburgs/"
             target="_blank"
             className={classes.navLink}
           >
@@ -101,7 +101,7 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
+            href="https://www.instagram.com/bucklandburgers/?hl=en"
             target="_blank"
             className={classes.navLink}
           >

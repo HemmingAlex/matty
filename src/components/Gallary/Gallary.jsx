@@ -34,115 +34,114 @@ const IMAGES =
 [{
         src: Thanks,
         thumbnail: Thanks,
-        thumbnailWidth: 174,
-        thumbnailHeight: 174,
+        thumbnailWidth: 341,
+        thumbnailHeight: 341,
 },{
     src: Fin,
     thumbnail: Fin,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Burger,
     thumbnail: Burger,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 }
 ,{
     src: Cooking,
     thumbnail: Cooking,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Curious,
     thumbnail: Curious,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: CustomerBack,
     thumbnail: CustomerBack,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: DoubleChange,
     thumbnail: DoubleChange,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Eating,
     thumbnail: Eating,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Exchange,
     thumbnail: Exchange,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: FoodEater,
     thumbnail: FoodEater,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Front2,
     thumbnail: Front2,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Menue,
     thumbnail: Menue,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: OpenBurger,
     thumbnail: OpenBurger,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Precision,
     thumbnail: Precision,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Sauce,
     thumbnail: Sauce,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Sauce3,
     thumbnail: Sauce3,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Service,
     thumbnail: Service,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Setup,
     thumbnail: Setup,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Sleepy,
     thumbnail: Sleepy,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: TasteBurger,
     thumbnail: TasteBurger,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 },{
     src: Toplessburger,
     thumbnail: Toplessburger,
-    thumbnailWidth: 174,
-    thumbnailHeight: 174,
+    thumbnailWidth: 341,
+    thumbnailHeight: 341,
 }]
 
 class Gallary extends Component {
 
 
-     
 
 
     render() {
@@ -160,7 +159,7 @@ class Gallary extends Component {
     <br/>
     
 
-    <Gallery images={IMAGES}/>
+    <Gallery images={IMAGES} margin={10} rowHeight={374} />
 </div>
 <br/>
 
