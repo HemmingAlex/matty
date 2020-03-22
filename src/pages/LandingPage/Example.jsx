@@ -7,17 +7,20 @@ class Example extends React.Component {
       height: '504',
       width: '896',
       playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
+        autoplay: 1,
+        start: 192,
+        
       }
     };
- 
+    // https://youtu.be/FKWZbIhJafQ?t=194
     return (
 
       <YouTube
+
         videoId="FKWZbIhJafQ"
         opts={opts}
         onReady={this._onReady}
-      />
+     />
 
     );
   }

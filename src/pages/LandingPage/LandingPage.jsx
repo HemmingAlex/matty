@@ -4,6 +4,10 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 
+
+import Iframe from 'react-iframe';
+
+import {Link } from "gatsby";
 // @material-ui/icons
 
 // React icons
@@ -17,35 +21,37 @@ import GridItem from "components/Grid/GridItem.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
-import MyGal from "../../components/Gallary/Gallary.jsx";
 import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
 
 
+// additional plugins/ components
+import MyGal from "../../components/Gallary/Gallary.jsx";
 import Menue from "./burger bits/menue.jsx";
 import Ex from "./Example.jsx";
 import Map from "./SimpleMap.jsx";
-
 import Space  from "../../assets/TasteBurger.jpg";
+import Crti from "./burger bits/facebook";
 
 import F from "./land.module.scss";
 
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.jsx";
-import TeamSection from "./Sections/TeamSection.jsx";
-import WorkSection from "./Sections/WorkSection.jsx";
+// import ProductSection from "./Sections/ProductSection.jsx";
+// import TeamSection from "./Sections/TeamSection.jsx";
+// import WorkSection from "./Sections/WorkSection.jsx";
 
 const dashboardRoutes = [];
+
 
 class LandingPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     return (
-      <div>
+      <div className={F.background}>
         <Header
           color="transparent"
           routes={dashboardRoutes}
-          brand="Material Kit React"
+          brand="Buckland Burgers"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
@@ -54,16 +60,23 @@ class LandingPage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax filter image={require("assets/Open.jpg")}>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  
+  
+  <br/>
+  <br/>
+        <Parallax>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Buckland Burgers</h1> 
+                <h1 className={classes.title}></h1> 
                 <h4> 
-                Bristol market
                 </h4>
                 <br />
-                <Button
+                {/* <Button
                   color="danger"
                   size="lg"
                   href="https://www.youtube.com/watch?v=FKWZbIhJafQ"
@@ -72,7 +85,7 @@ class LandingPage extends React.Component {
                 >
                   <FaPlay/>
                   Watch video
-                </Button>
+                </Button> */}
               </GridItem>
             </GridContainer>
           </div>
@@ -91,6 +104,7 @@ class LandingPage extends React.Component {
 <br/>
 
 
+
   Buckland Burgers is a gourmet burger company based in Bristol. 
 Founded in the summer of 2015 by Stephen Brand and his boyfriend 
 Levi Lovell. Originally an off shoot of a market based artisan 
@@ -104,28 +118,26 @@ meat company based in Somerset called Buckland Venison. </h3>
 <br />
 <br />
 <br />
+
 <br />
 <br />
 <br />
-<qr/>
-             <MyGal margin={7}/>
+   <MyGal margin={7}/>
 <div className={F.font}>
   .................................................
       <Menue/>
       <br/>
       <br/>
       <br/>
+      <Crti/>
   </div>          </div>
         </div>
         
-    
+
+   
+
         
-        <br/>
-        <br/>
-        <br/>
-        
-        <container>
-        <Map className={F.map}/></container>
+   
         <Footer />
       </div>
     );

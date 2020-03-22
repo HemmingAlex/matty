@@ -5,10 +5,35 @@
 
 
 }
+.background { background-image: url("assets/BuckLogo.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: 40%;
+    background-position: center;
+
+    width: 100%;
+    height: 100%;
+
+
+}
+
+
 .flex {
 
     display: flex;
 }
+
+.fb {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 600px;
+    margin: auto;
+
+}
+
 
 
 .images {
@@ -28,4 +53,8 @@
     text-align: center;
     margin: auto;
     display: block;
+}
+h1,h2, h3 {
+    font-family: 'Berkshire Swash', Helvetica, sans-serif !important;
+
 }

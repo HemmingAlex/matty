@@ -11,6 +11,10 @@ import LandingPage from "./LandingPage/LandingPage.jsx";
 import ProfilePage from "./ProfilePage/ProfilePage.jsx";
 import LoginPage from "./LoginPage/LoginPage.jsx";
 
+import Contacts from "./Contact/Contacts.jsx";
+
+
+
 let hist = createMemoryHistory();
 
 export default () => (
@@ -20,6 +24,7 @@ export default () => (
       <Route path="/profile-page" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/" component={Components} />
+      <Route path="/contacts" component={Contacts} />
     </Switch>
   </Router>
 );

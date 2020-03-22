@@ -10,7 +10,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
+import { Apps, NotListedLocation, LocalDining } from "@material-ui/icons";
 
 // React icons
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
@@ -28,34 +28,40 @@ function HeaderLinks({ ...props }) {
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
-          buttonText="Components"
+          buttonText="Home"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
-          buttonIcon={Apps}
+          buttonIcon={LocalDining}
           dropdownList={[
             <Link to="/" className={classes.dropdownLink}>
-              All components
+              Home
             </Link>,
+            <Link to="/landing-page" className={classes.dropdownLink}>
+            Landing
+          </Link>,
+          <Link to="/contacts" className={classes.dropdownLink}>
+            Landing
+          </Link>,
             <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
+              href="www.google.com"
               target="_blank"
               className={classes.dropdownLink}
             >
-              Documentation
+              contact
             </a>
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-react"
+        <Button 
+         
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Download
+          <NotListedLocation className={classes.icons} /> 
+        <Link to="/contacts">  Come find us</Link>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
