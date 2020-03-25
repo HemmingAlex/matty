@@ -39,7 +39,7 @@ class Components extends React.Component {
     const { classes, ...rest } = this.props;
     return (
       <div>
-        <Header
+        {/* <Header
           brand="Material Kit React"
           rightLinks={<HeaderLinks />}
           fixed
@@ -79,7 +79,9 @@ class Components extends React.Component {
           <SectionExamples />
           <SectionDownload />
         </div>
-        <Footer />
+        <Footer /> */}
+
+        <Land/>
       </div>
     );
   }

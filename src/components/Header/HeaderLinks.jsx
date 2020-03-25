@@ -10,10 +10,10 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Apps, NotListedLocation, LocalDining } from "@material-ui/icons";
+import { Apps, NotListedLocation, LocalDining, Home, Camera } from "@material-ui/icons";
 
 // React icons
-import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaFacebook, FaInstagram, } from 'react-icons/fa';
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
@@ -25,7 +25,7 @@ function HeaderLinks({ ...props }) {
   const { classes } = props;
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           buttonText="Home"
@@ -38,22 +38,46 @@ function HeaderLinks({ ...props }) {
             <Link to="/" className={classes.dropdownLink}>
               Home
             </Link>,
-            <Link to="/landing-page" className={classes.dropdownLink}>
-            Landing
-          </Link>,
-          <Link to="/contacts" className={classes.dropdownLink}>
-            Landing
-          </Link>,
-            <a
-              href="www.google.com"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              contact
-            </a>
+          
+     
+          
           ]}
         />
+      </ListItem> */}
+
+      <ListItem className={classes.listItem}>
+        <Button 
+         
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Home className={classes.icons} /> 
+        <Link to="/">  Home</Link>
+        </Button>
       </ListItem>
+
+      <ListItem className={classes.listItem}>
+
+
+        <Button 
+         
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Camera className={classes.icons} /> 
+        <Link to="/socialmedia"> Gallery</Link>
+        </Button>
+      </ListItem>
+
+
+
+
+
+
+
+
+
+
       <ListItem className={classes.listItem}>
         <Button 
          
@@ -61,9 +85,11 @@ function HeaderLinks({ ...props }) {
           className={classes.navLink}
         >
           <NotListedLocation className={classes.icons} /> 
-        <Link to="/contacts">  Come find us</Link>
+        <Link to="/contacts">Location</Link>
         </Button>
       </ListItem>
+
+      
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"

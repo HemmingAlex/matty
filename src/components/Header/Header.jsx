@@ -16,6 +16,10 @@ import Menu from "@material-ui/icons/Menu";
 // core components
 import headerStyle from "assets/jss/material-kit-react/components/headerStyle.jsx";
 
+import Hmmm from "./hmmmm.module.scss";
+
+
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -73,7 +77,7 @@ class Header extends React.Component {
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button className={classes.title}><div>Buckland Burgers</div></Button>;
+    const brandComponent = <Button className={`${classes.title} black ${Hmmm.black}`}><div>{brand}</div></Button>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
@@ -126,6 +130,7 @@ Header.defaultProp = {
 };
 
 Header.propTypes = {
+  brand: PropTypes.string,
   classes: PropTypes.object.isRequired,
   color: PropTypes.oneOf([
     "primary",
@@ -150,6 +155,8 @@ Header.propTypes = {
   // changeColorOnScroll.height change it back to
   // this.props.color (see above)
   changeColorOnScroll: PropTypes.shape({
+    brand: PropTypes.string,
+
     height: PropTypes.number.isRequired,
     color: PropTypes.oneOf([
       "primary",

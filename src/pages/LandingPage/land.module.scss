@@ -1,7 +1,18 @@
+@media only screen and (max-width: 600px) {
+
+   
+    .images {
+        max-width: 100%;
+        max-height: 100%;
+        min-width: 100%;
+        min-width: 100%;
+    }
+}
+
+
 .font{
-      font-family: 'Berkshire Swash', Helvetica, sans-serif;
+     
       color: #2b2b2b;
-      text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
 
 
 }
@@ -22,6 +33,7 @@
 .flex {
 
     display: flex;
+    flex-wrap: wrap;
 }
 
 .fb {
@@ -30,8 +42,15 @@
     flex-wrap: wrap;
     align-content: space-between;
     height: 600px;
-    margin: auto;
+    margin: 50px;
+    overflow: hidden;
+    border: none;
 
+}
+.nav {
+
+margin:0 auto;
+text-align: center;
 }
 
 
@@ -44,9 +63,10 @@
         max-width: 30%;
         max-height:30%;
       }
-.margin{
 
-    margin:20px;
+
+.margin{
+margin: 20px;
 }
 
 .map {
@@ -54,7 +74,18 @@
     margin: auto;
     display: block;
 }
+
+
+
 h1,h2, h3 {
-    font-family: 'Berkshire Swash', Helvetica, sans-serif !important;
+    
+    font-family: 'Pieces of Eight' !important;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/scss/Pieces Of Eight/Pieces of Eight.ttf');
+
+    src: local('Pieces of Eight'), local('Pieces of Eight'),
+
+         url('../../assets/scss/Pieces Of Eight/Pieces of Eight.ttf') format('truetype');
 
 }

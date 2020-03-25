@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Map from "../LandingPage/SimpleMap.jsx";
-import Ex from "../LandingPage/Example.jsx";
+import Ex from "../LandingPage/burger bits/Example.jsx";
 
 
 //style
@@ -33,13 +33,13 @@ class Contacts extends Component {
         return (
             <div> 
                 <Header
-          color="dark"
+          color="warning"
           routes={dashboardRoutes}
           brand="Buckland Burgers"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
-            height: 400,
+            height: 90400,
             color: "warning"
           }}
           {...rest}
@@ -47,10 +47,16 @@ class Contacts extends Component {
                 
 <br/>
 <br/>
+<br/><h1> Stephen Brand</h1>
+<br/>bucklandburgers@gmail.com
+
+<br/>07572 416745
+
 <br/>
 <br/>
-<br/>
-<h1> Where to find us</h1>
+
+
+<h2> Where to find us</h2>
 <br/>
 <br/>
 
@@ -72,30 +78,20 @@ from wedding street food to corporate catering.
 <br/>
 <br/>
 <br/>
-    
-    <Ex/>
 <br/>
 <br/>
-<br/><h2>Contact</h2>
-<br/>
-<br/>
-Stephen Brand
-<br/>
-<br/>
-bucklandburgers@gmail.com
-<br/>
-<br/>
-07572 416745
 
 <br/>
 <br/>
-Designed By Maverick Media
+<br/>
+<br/>
+
+<br/>
+<br/>
 <br/>
 
 
-facebook comments:
 
-<div class="fb-post" data-href="https://www.facebook.com/chris.yates.79/posts/10102216328134382" data-width="500" data-show-text="true"><blockquote cite="https://developers.facebook.com/chris.yates.79/posts/10102216328134382" class="fb-xfbml-parse-ignore"><p>We used Buckland for a corporate event in Bristol, the food was delicious and the service great. We were all impressed and would certainly recommend! Thanks</p>Posted by <a href="#" role="button">Chris Yates</a> on&nbsp;<a href="https://developers.facebook.com/chris.yates.79/posts/10102216328134382">Thursday, 13 February 2020</a></blockquote></div>
 
 
 

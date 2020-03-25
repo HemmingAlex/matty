@@ -24,13 +24,11 @@ import Parallax from "components/Parallax/Parallax.jsx";
 import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
 
 
+import Nav from "../Components/Sections/SectionTypography";
+
 // additional plugins/ components
-import MyGal from "../../components/Gallary/Gallary.jsx";
 import Menue from "./burger bits/menue.jsx";
-import Ex from "./Example.jsx";
-import Map from "./SimpleMap.jsx";
 import Space  from "../../assets/TasteBurger.jpg";
-import Crti from "./burger bits/facebook";
 
 import F from "./land.module.scss";
 
@@ -42,8 +40,19 @@ import F from "./land.module.scss";
 
 const dashboardRoutes = [];
 
-
 class LandingPage extends React.Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+
+
+      change: "2"
+       
+    }
+  }
+  
   render() {
     const { classes, ...rest } = this.props;
     return (
@@ -51,12 +60,12 @@ class LandingPage extends React.Component {
         <Header
           color="transparent"
           routes={dashboardRoutes}
-          brand="Buckland Burgers"
+          brand={<div>Buckland Burgers</div>}
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
             height: 400,
-            color: "white"
+            color: "white",
           }}
           {...rest}
         />
@@ -64,18 +73,17 @@ class LandingPage extends React.Component {
   <br/>
   <br/>
   <br/>
-  
-  
-  <br/>
-  <br/>
+
         <Parallax>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}></h1> 
+                <h1 className={classes.title}>
+                  </h1> 
                 <h4> 
                 </h4>
-                <br />
+                <br/>
+
                 {/* <Button
                   color="danger"
                   size="lg"
@@ -95,8 +103,13 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
   <br/>
   <br/>
-          <div ><br/>
-<img className={F.images} src={Space}></img>          <container className={F.margin}>
+          <div className={F.flex}><br/> 
+<img className={F.images} src={Space}></img>    
+
+{/* <Nav className={F.nav}/> */}
+
+               
+                     <container className={F.margin}>
 <h1 className={F.font}>Fresh Somerset Ingredients</h1>
 
 <h3 className={F.font}>
@@ -104,36 +117,33 @@ class LandingPage extends React.Component {
 <br/>
 
 
+  Buckland Burgers is a gourmet burger company based in Bristol. <br/>
 
-  Buckland Burgers is a gourmet burger company based in Bristol. 
-Founded in the summer of 2015 by Stephen Brand and his boyfriend 
-Levi Lovell. Originally an off shoot of a market based artisan 
-meat company based in Somerset called Buckland Venison. </h3>
+Founded in the summer of 2015 by Stephen Brand and his boyfriend <br/>
+
+Levi Lovell. Originally an off shoot of a market based artisan <br/>
+
+meat company based in Somerset called Buckland Venison.<br/>
+ </h3>
 
 </container>
-
  </div>
  <qr/> 
  <br />
 <br />
 <br />
 <br />
-
 <br />
-<br />
-<br />
-   <MyGal margin={7}/>
 <div className={F.font}>
   .................................................
       <Menue/>
       <br/>
       <br/>
       <br/>
-      <Crti/>
   </div>          </div>
         </div>
         
-
+  
    
 
         

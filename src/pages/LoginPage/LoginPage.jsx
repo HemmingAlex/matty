@@ -21,16 +21,28 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
 
+
+import firebase from "firebase";
+
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 
 import image from "assets/img/bg7.jpg";
+
+// import Log from "../../fire/login/login.js";
+
+//extra
+// import Firebase from "../../Fire/index.js";
+//ahyyooo
+
 
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
     // we use this to make the card to appear after the page has been rendered
     this.state = {
-      cardAnimaton: "cardHidden"
+      cardAnimaton: "cardHidden",
+      email: "",
+      password: ""
     };
   }
   componentDidMount() {
@@ -42,9 +54,58 @@ class LoginPage extends React.Component {
       700
     );
   }
+
+
+// holding the value
+emailChangeHandler = (e) => {
+this.setState({
+  email: e.target.value
+})
+}
+
+passwordChangeHandler = (e) => {
+  this.setState({
+    password: e.target.value
+  })
+}
+
+// submiting the form data to firebase
+
+submitFomData = (e) => {
+
+    alert(`${this.state.password} food ${this.state.email}`);
+    e.preventDefault();
+
+    firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+
+      console.log(errorCode, errorMessage)
+      // ...
+    });
+
+}
+
+
+
+
+// this.email= ;
+// this.password
+//   }
+  // firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+
+    // firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    //   // Handle Errors here.
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+    //   // ...
+    // });
+
   render() {
     const { classes, ...rest } = this.props;
     return (
+
       <div>
         <Header
           absolute
@@ -61,13 +122,15 @@ class LoginPage extends React.Component {
             backgroundPosition: "top center"
           }}
         >
+
+          {/* <Log/> */}
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={4}>
                 <Card className={classes[this.state.cardAnimaton]}>
-                  <form className={classes.form}>
+                  <form className={classes.form} onSubmit={this.submitFomData}>
                     <CardHeader color="primary" className={classes.cardHeader}>
-                      <h4>Login</h4>
+                      <h4>Login (only email works)</h4>
                       <div className={classes.socialLine}>
                         <Button
                           justIcon
@@ -103,7 +166,7 @@ class LoginPage extends React.Component {
                       <CustomInput
                         labelText="First Name..."
                         id="first"
-                        formControlProps={{
+                         formControlProps={{
                           fullWidth: true
                         }}
                         inputProps={{
@@ -118,11 +181,17 @@ class LoginPage extends React.Component {
                       <CustomInput
                         labelText="Email..."
                         id="email"
+                        // vlaue={this.state.email}
+                        // onChange={this.emailChangeHandler}
+                        //"input porops, reallY?"
+
                         formControlProps={{
                           fullWidth: true
                         }}
                         inputProps={{
                           type: "email",
+                          vlaue: this.state.email,
+                          onChange: this.emailChangeHandler,
                           endAdornment: (
                             <InputAdornment position="end">
                               <Email className={classes.inputIconsColor} />
@@ -132,12 +201,14 @@ class LoginPage extends React.Component {
                       />
                       <CustomInput
                         labelText="Password"
-                        id="pass"
-                        formControlProps={{
+                        id="pass"                    
+                      formControlProps={{
                           fullWidth: true
                         }}
                         inputProps={{
                           type: "password",
+                          value: this.state.password,
+                          onChange: this.passwordChangeHandler,
                           endAdornment: (
                             <InputAdornment position="end">
                               <LockOutlined/>
@@ -147,8 +218,8 @@ class LoginPage extends React.Component {
                       />
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
-                      <Button simple color="primary" size="lg">
-                        Get started
+                      <Button simple color="primary" size="lg" type="submit">
+                        Get started or login
                       </Button>
                     </CardFooter>
                   </form>
@@ -156,6 +227,11 @@ class LoginPage extends React.Component {
               </GridItem>
             </GridContainer>
           </div>
+          {/* {/* <Log/> */}
+
+          {/* <Firebase/> */}
+ */}
+
           <Footer whiteFont />
         </div>
       </div>

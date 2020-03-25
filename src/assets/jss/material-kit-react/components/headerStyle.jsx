@@ -51,6 +51,8 @@ const headerStyle = {
   flex: {
     flex: 1
   },
+  black: { color:"black !important"
+},
   title: {
     ...defaultFont,
     lineHeight: "30px",
@@ -60,7 +62,7 @@ const headerStyle = {
     color: "inherit",
     padding: "8px 16px",
     "&:hover,&:focus": {
-      color: "inherit",
+      color: "black !important",
       background: "transparent"
     }
   },

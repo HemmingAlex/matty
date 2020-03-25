@@ -1,0 +1,45 @@
+.block {
+
+    display:block;
+margin: 0 auto;
+
+}
+
+.a {
+    margin: 50px;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+   
+    .youtube {
+        max-width: 30%;
+        max-height: 30%;
+        min-width: 30%;
+        min-width: 30%;
+    }
+}
+.youtube {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-width: 100%;
+}
+
+
+
+
+        @font-face{
+            
+    font-family: 'Pieces of Eight';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/scss/Pieces Of Eight/Pieces of Eight.ttf');
+
+    src: local('Pieces of Eight'), local('Pieces of Eight'),
+
+         url('../../assets/scss/Pieces Of Eight/Pieces of Eight.ttf') format('truetype')
+        
+        }
