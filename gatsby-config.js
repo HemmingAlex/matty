@@ -23,6 +23,18 @@ module.exports = {
           },
         ],
       },
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyBXlNhZCI0nTuzY6rJZ-JcEpsw6A5g-n_8",
+          authDomain: "brand-s-burgers.firebaseapp.com",
+          databaseURL: "https://brand-s-burgers.firebaseio.com",
+          projectId: "brand-s-burgers",
+          // storageBucket: "<YOUR_FIREBASE_STORAGE_BUCKET>",
+          // messagingSenderId: "<YOUR_FIREBASE_MESSAGING_SENDER_ID>",
+          // appId: "<YOUR_FIREBASE_APP_ID>"
+        }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

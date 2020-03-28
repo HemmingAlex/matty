@@ -18,6 +18,8 @@ import { FaTwitter, FaFacebook, FaInstagram, } from 'react-icons/fa';
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
 import Button from "components/CustomButtons/Button.jsx";
+import Bug from "./fix.module.scss";
+
 
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
 
@@ -45,28 +47,32 @@ function HeaderLinks({ ...props }) {
         />
       </ListItem> */}
 
-      <ListItem className={classes.listItem}>
-        <Button 
+      <ListItem 
+      className={classes.listItem}
+      >
+       
+          
+        <Link to="/"> <Button 
          
           color="transparent"
-          className={classes.navLink}
-        >
-          <Home className={classes.icons} /> 
-        <Link to="/">  Home</Link>
-        </Button>
+          className={`${Bug.button}${classes.navLink}`}
+        > <Home className={classes.icons} />  Home</Button></Link>
+        
       </ListItem>
 
-      <ListItem className={classes.listItem}>
+      <ListItem 
+      className={classes.listItem}
+      >
 
 
-        <Button 
+       <Link to="/socialmedia"> <Button 
          
           color="transparent"
-          className={classes.navLink}
+          className={`${Bug.button}${classes.navLink}`}
         >
           <Camera className={classes.icons} /> 
-        <Link to="/socialmedia"> Gallery</Link>
-        </Button>
+         Media
+        </Button></Link>
       </ListItem>
 
 
@@ -78,15 +84,17 @@ function HeaderLinks({ ...props }) {
 
 
 
-      <ListItem className={classes.listItem}>
-        <Button 
+      <ListItem 
+      className={classes.listItem}
+      >
+       <Link to="/contacts"><Button 
          
           color="transparent"
-          className={classes.navLink}
+          className={`${Bug.button}${classes.navLink}`}
         >
           <NotListedLocation className={classes.icons} /> 
-        <Link to="/contacts">Location</Link>
-        </Button>
+        Location
+        </Button></Link>
       </ListItem>
 
       

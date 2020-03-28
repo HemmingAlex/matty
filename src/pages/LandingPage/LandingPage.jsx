@@ -27,7 +27,7 @@ import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.js
 import Nav from "../Components/Sections/SectionTypography";
 
 // additional plugins/ components
-import Menue from "./burger bits/menue.jsx";
+import Menue from "./burger bits/newMenue.jsx";
 import Space  from "../../assets/TasteBurger.jpg";
 
 import F from "./land.module.scss";
@@ -119,9 +119,7 @@ class LandingPage extends React.Component {
 
   Buckland Burgers is a gourmet burger company based in Bristol. <br/>
 
-Founded in the summer of 2015 by Stephen Brand and his boyfriend <br/>
-
-Levi Lovell. Originally an off shoot of a market based artisan <br/>
+ Originally an off shoot of a market based artisan <br/>
 
 meat company based in Somerset called Buckland Venison.<br/>
  </h3>

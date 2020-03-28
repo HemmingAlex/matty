@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -32,6 +32,12 @@ class Header extends React.Component {
   handleDrawerToggle() {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   }
+
+  // useEffect(){
+  //   if (this.props.changeColorOnScroll) {
+  //     window.addEventListener("scroll", this.headerColorChange);
+  //   }
+  // } funny effets, strangely more responsive
   componentDidMount() {
     if (this.props.changeColorOnScroll) {
       window.addEventListener("scroll", this.headerColorChange);

@@ -43,3 +43,11 @@ margin: 0 auto;
          url('../../assets/scss/Pieces Of Eight/Pieces of Eight.ttf') format('truetype')
         
         }
+
+        .background {
+            background-image: url("assets/Peng.jpg");
+            background-position: top;
+            background-size: 100%;
+            background-color: goldenrod;
+            background-repeat: no-repeat;
+        }

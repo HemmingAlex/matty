@@ -12,6 +12,8 @@ import S from "./Social.module.scss";
 import classNames from "classnames";
 
 
+import Peng from "../../assets/Peng.jpg";
+
 //core
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
@@ -35,6 +37,7 @@ const dashboardRoutes = [];
     this.activate = this.activate.bind(this)
          this.state = {
               Reveal: true,
+              change: "2",
          }
      }
 
@@ -51,19 +54,26 @@ const dashboardRoutes = [];
         const { classes, ...rest } = this.props;
 
         return (
-            <div>
+            <div className={S.background}>
                     <Header
-          color="rose"
+          color="transparent"
           routes={dashboardRoutes}
           brand="Buckland Burgers"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
-            height: 400,
+            height: 130,
             color: "rose"
           }}
           {...rest}
         />
+  {/* <br/><img src={Peng} /> */}
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
   <br/>
   <br/>
   <br/>
@@ -78,6 +88,7 @@ const dashboardRoutes = [];
 
         <div className={classNames(classes.main, classes.mainRaised)}>
                 
+  <br/>
             <div className={classes.container}>
             <br/>
 

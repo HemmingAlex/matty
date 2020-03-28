@@ -13,6 +13,9 @@
 .font{
      
       color: #2b2b2b;
+      margin: 0 auto;
+      text-align: center;
+    //   display: inline-block;
 
 
 }
@@ -62,6 +65,9 @@ text-align: center;
         border-bottom-left-radius: 80% 80%;
         max-width: 30%;
         max-height:30%;
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
       }
 
 
@@ -77,11 +83,10 @@ margin: 20px;
 
 
 
-h1,h2, h3 {
+h1,h2, h3,h4, h5, div {
     
     font-family: 'Pieces of Eight' !important;
-    font-style: normal;
-    font-weight: 400;
+ 
     src: url('../../assets/scss/Pieces Of Eight/Pieces of Eight.ttf');
 
     src: local('Pieces of Eight'), local('Pieces of Eight'),

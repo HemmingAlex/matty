@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -22,7 +23,7 @@ import CardFooter from "components/Card/CardFooter.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 
-import firebase from "firebase";
+import firebase from "gatsby-plugin-firebase";
 
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 
@@ -76,7 +77,11 @@ submitFomData = (e) => {
     alert(`${this.state.password} food ${this.state.email}`);
     e.preventDefault();
 
-    firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch(function(error) {
+    firebase
+    .auth()
+    .createUserWithEmailAndPassword(this.state.email, this.state.password)
+    .catch(function(error) 
+    {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -86,6 +91,9 @@ submitFomData = (e) => {
     });
 
 }
+
+
+///firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
 
 
 
@@ -128,40 +136,13 @@ submitFomData = (e) => {
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={4}>
                 <Card className={classes[this.state.cardAnimaton]}>
-                  <form className={classes.form} onSubmit={this.submitFomData}>
+                  <form className={classes.form}                    onSubmit={this.submitFomData}>
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Login (only email works)</h4>
-                      <div className={classes.socialLine}>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <FaTwitter/>
-                        </Button>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <FaFacebook/>
-                        </Button>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <FaGooglePlusG/>
-                        </Button>
-                      </div>
+                     
                     </CardHeader>
-                    <p className={classes.divider}>Or Be Classical</p>
+
+                    
                     <CardBody>
                       <CustomInput
                         labelText="First Name..."

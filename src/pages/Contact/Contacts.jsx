@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect} from 'react';
 
 import Map from "../LandingPage/SimpleMap.jsx";
 import Ex from "../LandingPage/burger bits/Example.jsx";
 
-
+import Gsap from "../LandingPage/burger bits/MultipleElements.jsx";
 //style
 import F from "../LandingPage/land.module.scss";
 
@@ -26,6 +26,20 @@ const dashboardRoutes = [];
 
 
 class Contacts extends Component {
+    
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+
+
+                change: "2"
+                 
+              
+            }
+        }
+    
+    
     render() {
 
         const { classes, ...rest } = this.props;
@@ -33,13 +47,13 @@ class Contacts extends Component {
         return (
             <div> 
                 <Header
-          color="warning"
+          color="transparent"
           routes={dashboardRoutes}
           brand="Buckland Burgers"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
-            height: 90400,
+            height: null,
             color: "warning"
           }}
           {...rest}
@@ -48,9 +62,9 @@ class Contacts extends Component {
 <br/>
 <br/>
 <br/><h1> Stephen Brand</h1>
-<br/>bucklandburgers@gmail.com
+<br/>Email: bucklandburgers@gmail.com
 
-<br/>07572 416745
+<br/>Phone number: 07572 416745
 
 <br/>
 <br/>
@@ -82,7 +96,7 @@ from wedding street food to corporate catering.
 <br/>
 
 <br/>
-<br/>
+{/* <br/><Gsap/> */}
 <br/>
 <br/>
 
